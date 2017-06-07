@@ -1,0 +1,139 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+
+                    // About Me (Left Sidebar) End
+                    // About Me (Right Sidebar) Start
+                    // Contact (Right Sidebar) Start
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 Contact Me
+                                    a(href='/')
+                                        i.icon-home
+                                .col-md-12.content-page
+                                    .col-md-12.blog-post
+                                        // Intro Start
+                                        .post-title.margin-bottom-10
+                                            h1
+                                                | Looking for a 
+                                                span.main-color online presence
+                                                | ?
+                                        p
+                                            | I am in the website field since 2004 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. 
+                                            b I am a developer
+                                            | , et accumsan nisi. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodales. Sed posuere nisi ipsum, eget dignissim nunc dapibus eget. Aenean elementum sollicitudin sapien ut sapien fermentum aliquet mollis. Curabitur ac quam orci sodales quam ut tempor.
+                                        // Intro End
+                                        // Testimonials Start
+                                        .post-title.margin-top-50
+                                            h2
+                                                | I hope you've checked 
+                                                a(href='work.html', data-toggle='tooltip', data-placement='top', title='Check out my work.') my work
+                                                | , Let's take a look on what other clients said about my work.
+                                        .row
+                                            .col-md-6.col-sm-6.col-xs-12
+                                                .testimonial-content
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus.
+                                                .testimonial-client-info
+                                                    .testimonial-client.client-thumb
+                                                        img(src='assets/images/testimonial/1.png', alt='')
+                                                    .client-text
+                                                        .client-name Jhon Doe
+                                                        span Rolling LTD, Founder
+                                            .col-md-6.col-sm-6.col-xs-12
+                                                .testimonial-content
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus.
+                                                .testimonial-client-info
+                                                    .testimonial-client.client-thumb
+                                                        img(src='assets/images/testimonial/2.png', alt='')
+                                                    .client-text
+                                                        .client-name Jhon Doe
+                                                        span WebRes LTD, Founder
+                                            .col-md-6.col-sm-6.col-xs-12
+                                                .testimonial-content
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus.
+                                                .testimonial-client-info
+                                                    .testimonial-client.client-thumb
+                                                        img(src='assets/images/testimonial/3.png', alt='')
+                                                    .client-text
+                                                        .client-name Jhon Doe
+                                                        span WeSoon LTD, Founder
+                                        // Testimonials  End
+                                        // Contact Me Start
+                                        .post-title.margin-top-70
+                                            h1
+                                                | Contact 
+                                                span.main-color Me
+                                        .row
+                                            .col-md-4.col-sm-4
+                                                .contact-us-detail
+                                                    i.icon-screen-smartphone.color-6
+                                                    p
+                                                        a(href='tel:+1234567890') +1234 567 890
+                                            .col-md-4.col-sm-4
+                                                .contact-us-detail
+                                                    i.icon-envelope-open.color-5
+                                                    p
+                                                        a(href='mailto:name@domain.com') name@domain.com
+                                            .col-md-4.col-sm-4
+                                                .contact-us-detail
+                                                    i.icon-clock.color-3
+                                                    p Mon - Fri 09:00 – 18:00
+                                        .row.margin-top-30
+                                            .col-md-12
+                                                .row
+                                                    form
+                                                        .col-sm-6
+                                                            .form-group
+                                                                input#name.form-control(type='text', placeholder='Your Name')
+                                                        .col-sm-6
+                                                            .form-group
+                                                                input#email.form-control(type='email', placeholder='Your Email')
+                                                        .col-sm-6
+                                                            .form-group
+                                                                input#website.form-control(type='text', placeholder='Your Website')
+                                                        .col-sm-6
+                                                            .form-group
+                                                                input#address.form-control(type='text', placeholder='Where are You From?')
+                                                        .col-sm-12
+                                                            select#subject.form-group.form-control
+                                                                option(value='', selected='', disabled='') Subject
+                                                                option Website Design & Development
+                                                                option Wordpress Development
+                                                                option Search Engine Optimization
+                                                                option Mobile Website
+                                                                option I Want to General Talk
+                                                                option Other
+                                                        .col-sm-12
+                                                            .textarea-message.form-group
+                                                                textarea#message.textarea-message.form-control(placeholder='Your Message', rows='5')
+                                                        .text-center
+                                                            button.load-more-button(type='submit') Send
+                                        // Contact Me End
+                                        // Subscribe Form Start
+                                        include /includes/subscriber.pug
+                                        // Subscribe Form End
+                                        // Footer Start
+                                        include /includes/footer.pug
+                                                // Footer End
+                                                // Contact (Right Sidebar) End
+                                                // Back to Top Start
+                                                a.scroll-to-top(href='#')
+                                                    i.fa.fa-long-arrow-up
+                                                // Back to Top End
+                                                

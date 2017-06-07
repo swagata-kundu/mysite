@@ -1,0 +1,28 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+                    
+                    .col-md-9
+                        
+                        .col-md-12.page-body
+
+                        // Footer Start
+                        include /includes/footer.pug
+
+                        // Footer End
+                        // Blog Post (Right Sidebar) End
+                        // Back to Top Start
+                        a.scroll-to-top(href='#')
+                            i.fa.fa-long-arrow-up
+                        // Back to Top End

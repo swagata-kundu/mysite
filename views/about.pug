@@ -1,0 +1,76 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+
+                    // About Me (Left Sidebar) End
+                    // About Me (Right Sidebar) Start
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 About Me
+                                    a(href='contact.html')
+                                        i.icon-envelope
+                                .col-md-12.content-page
+                                    .col-md-12.blog-post
+                                        // My Intro Start
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                | Hi, I am 
+                                                span.main-color Swagata
+                                            ul.knowledge
+                                                li.bg-color-1 Web Designer
+                                                li.bg-color-4 Web Developer
+                                                li.bg-color-6 Freelancer
+                                                li.bg-color-5 Consultant
+                                        // My Intro End
+                                        p
+                                            | I am in the website field since 2004 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at quam at orci commodo hendrerit vitae nec eros. Vestibulum neque est, imperdiet nec tortor nec, tempor semper metus. 
+                                            b I am a developer
+                                            | , et accumsan nisi. Duis laoreet pretium ultricies. Curabitur rhoncus auctor nunc congue sodales. Sed posuere nisi ipsum, eget dignissim nunc dapibus eget. Aenean elementum sollicitudin sapien ut sapien fermentum aliquet mollis. Curabitur ac quam orci sodales quam ut tempor. suspendisse, gravida in augue in, interdum 
+                                            b
+                                                a(href='work.html', data-toggle='tooltip', data-placement='top', title='Check out my work.') Work
+                                            |  bibendum dui. Suspendisse sit amet justo sit amet diam fringilla commodo. Praesent ac magna at metus malesuada tincidunt non ac arcu. Nunc gravida eu felis vel elementum. Vestibulum sodales quam ut tempor tempor Donec sollicitudin imperdiet nec tortor nec, tempor semper metus..
+                                        // Video Start
+                                       
+                                        //- .video-box.margin-top-40.margin-bottom-80
+                                        //-     .video-tutorial
+                                        //-         a.video-popup(href='https://www.youtube.com/watch?v=O2Bsw3lrhvs', title='My Thought')
+                                        //-             img(src='assets/images/pic/my-pic.png', alt='')
+                                        //-     p Take a look about my thought on website design.
+                                        //- // Video End
+
+                                        // My Service Start
+                                        .post-title
+                                            h1
+                                                | My 
+                                                span.main-color Services
+                                        .list.list-style-2.margin-top-30
+                                            ul
+                                                li Website Design
+                                                li Website Development
+                                                li Wordpress Theme Development
+                                                li Mobile Apps UI/UX Design
+                                                li Online Software Development
+                                                li E-commerce Development
+                                                li UI/UX Consulting
+                                        // My Service End
+                                    .col-md-12.text-center
+                                        a.load-more-button(href='contact.html', data-toggle='tooltip', data-placement='top', title='Visit on my contact page for hire me.') Hire
+                                include /includes/subscriber.pug
+
+                            include /includes/footer.pug
+
+                                a.scroll-to-top(href='#')
+                                    i.fa.fa-long-arrow-up

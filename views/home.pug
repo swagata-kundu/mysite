@@ -1,0 +1,48 @@
+doctype html
+html(lang='en')
+  include includes/head.pug
+
+  body
+    // Preloader Start
+    .preloader
+      .rounder
+    // Preloader End
+    #main
+      .container
+        .row
+          // About Me (Left Sidebar) Start
+          include /includes/about.pug
+          include includes/blogMixin.pug
+
+          .col-md-9
+            .col-md-12.page-body
+              .row
+                .sub-title
+                  h2 My Blog
+                  |                                 
+                  a(href='contact.html')
+                    i.icon-envelope
+                |                             
+                .col-md-12.content-page
+                  // Blog Post Start
+
+                  +bloglist
+                  +bloglist
+
+                  //Blog Post End
+
+                  .col-md-12.text-center
+                    a#load-more-post.load-more-button(href='javascript:void(0)') Load
+                    |                                     
+                    #post-end-message
+                include /includes/subscriber.pug
+
+            // Footer Start
+            include /includes/footer.pug
+
+            // Footer End
+            // Blog Post (Right Sidebar) End
+            // Back to Top Start
+            a.scroll-to-top(href='#')
+              i.fa.fa-long-arrow-up
+            // Back to Top End

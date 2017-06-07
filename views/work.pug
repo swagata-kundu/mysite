@@ -1,0 +1,136 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 My Portfolio
+                                    |                                 
+                                    a(href='contact.html')
+                                        i.icon-envelope
+                                |                             
+                                .col-md-12.content-page
+                                    .col-md-12.blog-post
+                                        // Intro Start
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                | Let&apos;s take a look on 
+                                                span.main-color My Work
+                                        // Intro End
+                                        // Portfolio Start
+                                        div
+                                            // Portfolio Detail Start
+                                            .row.portfolio
+                                                .col-sm-6.custom-pad-1
+                                                    img.img-responsive(src='assets/images/portfolio/1.jpg', alt='')
+                                                |                                             
+                                                .col-sm-6.custom-pad-2
+                                                    .table-responsive
+                                                        table.table.table-bordered
+                                                            tbody
+                                                                tr
+                                                                    td
+                                                                        b Skills
+                                                                    |                                                                 
+                                                                    td HTML5 / CSS3 / JAVASCRIPT
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Duration
+                                                                    |                                                                 
+                                                                    td 20 Days
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Cost
+                                                                    |                                                                 
+                                                                    td $5000
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Url
+                                                                    |                                                                 
+                                                                    td
+                                                                        a(href='http://www.uipasta.com', title='uipasta') Rolling
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b About Project
+                                                                    |                                                                 
+                                                                    td
+                                                                        | Lorem ipsum dolor sit amet consectetur adipiscing elit Vivamus feugiat facilisis dignissim Etiam scelerisque ultricies euismod.
+                                            // Portfolio Detail End
+                                            // Portfolio Detail Start
+                                            .row.portfolio
+                                                .col-sm-6.custom-pad-1
+                                                    .image-carousel
+                                                        img.img-responsive(src='assets/images/portfolio/2.jpg', alt='')
+                                                        |                                                     
+                                                        img.img-responsive(src='assets/images/portfolio/3.jpg', alt='')
+                                                |                                             
+                                                .col-sm-6.custom-pad-2
+                                                    .table-responsive
+                                                        table.table.table-bordered
+                                                            tbody
+                                                                tr
+                                                                    td
+                                                                        b Skills
+                                                                    |                                                                 
+                                                                    td HTML5 / CSS3 / JAVASCRIPT
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Duration
+                                                                    |                                                                 
+                                                                    td 20 Days
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Cost
+                                                                    |                                                                 
+                                                                    td $5000
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b Url
+                                                                    |                                                                 
+                                                                    td
+                                                                        a(href='http://www.uipasta.com', title='uipasta') Rolling
+                                                                |                                                             
+                                                                tr
+                                                                    td
+                                                                        b About Project
+                                                                    |                                                                 
+                                                                    td
+                                                                        | Lorem ipsum dolor sit amet consectetur adipiscing elit Vivamus feugiat facilisis dignissim Etiam scelerisque ultricies euismod.
+                                            // Portfolio Detail End
+
+                                    |                                 
+                                    .col-md-12.text-center
+                                        a#load-more-portfolio.load-more-button(href='javascript:void(0)') Load
+                                        |                                     
+                                        #portfolio-end-message
+                                include /includes/subscriber.pug
+
+                            // Footer Start
+                        include /includes/footer.pug
+
+                            // Footer End
+                            // Portfolio (Right Sidebar) End
+
+                            // Back to Top Start
+                            a.scroll-to-top(href='#')
+                                i.fa.fa-long-arrow-up
+                            // Back to Top End

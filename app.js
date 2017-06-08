@@ -18,7 +18,9 @@ App.use('/assets', Express.static(Path.join(__dirname, 'assets')));
 App.use(require('./routes'));
 
 App.use((req, res, next) => {
-    res.render('404', { data: static });
+    res.render('404', {
+        data: static
+    });
 });
 
 

@@ -1,7 +1,7 @@
 doctype html
 html(lang='en')
     include includes/head.pug
-
+    include includes/workMixin.pug
     body
         // Preloader Start
         .preloader
@@ -18,7 +18,7 @@ html(lang='en')
                                 .sub-title
                                     h2 My Portfolio
                                     |                                 
-                                    a(href='contact.html')
+                                    a(href='contact')
                                         i.icon-envelope
                                 |                             
                                 .col-md-12.content-page
@@ -32,45 +32,8 @@ html(lang='en')
                                         // Portfolio Start
                                         div
                                             // Portfolio Detail Start
-                                            .row.portfolio
-                                                .col-sm-6.custom-pad-1
-                                                    img.img-responsive(src='assets/images/portfolio/1.jpg', alt='')
-                                                |                                             
-                                                .col-sm-6.custom-pad-2
-                                                    .table-responsive
-                                                        table.table.table-bordered
-                                                            tbody
-                                                                tr
-                                                                    td
-                                                                        b Skills
-                                                                    |                                                                 
-                                                                    td HTML5 / CSS3 / JAVASCRIPT
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Duration
-                                                                    |                                                                 
-                                                                    td 20 Days
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Cost
-                                                                    |                                                                 
-                                                                    td $5000
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Url
-                                                                    |                                                                 
-                                                                    td
-                                                                        a(href='http://www.uipasta.com', title='uipasta') Rolling
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b About Project
-                                                                    |                                                                 
-                                                                    td
-                                                                        | Lorem ipsum dolor sit amet consectetur adipiscing elit Vivamus feugiat facilisis dignissim Etiam scelerisque ultricies euismod.
+                                            +works
+                                            +works
                                             // Portfolio Detail End
                                             // Portfolio Detail Start
                                             .row.portfolio
@@ -117,6 +80,7 @@ html(lang='en')
                                                                         | Lorem ipsum dolor sit amet consectetur adipiscing elit Vivamus feugiat facilisis dignissim Etiam scelerisque ultricies euismod.
                                             // Portfolio Detail End
 
+                                            
                                     |                                 
                                     .col-md-12.text-center
                                         a#load-more-portfolio.load-more-button(href='javascript:void(0)') Load

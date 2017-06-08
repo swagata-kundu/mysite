@@ -1,0 +1,94 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+
+                    // About Me (Left Sidebar) End
+                    // About Me (Right Sidebar) Start
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 Resume
+                                    a(href='contact')
+                                        i.icon-envelope
+                                .col-md-12.content-page
+
+                                    //Educational Experience Start
+                                    .col-md-12.blog-post
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                |My
+                                                span.main-color Education
+                                        ul.timeline
+                                            li
+                                                .timeline-content
+                                                    h4 CSS College Larkana
+                                                    em
+                                                        span Masters Degree
+                                                        span 2013-2016
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.
+                                            li
+                                                .timeline-content
+                                                    h4 CSS College Larkana
+                                                    em
+                                                        span Masters Degree
+                                                        span 2013-2016
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.
+                                            
+                                            //Educational Experience end
+                                   
+                                    
+                                    //Work Experience Start
+                                    .col-md-12.blog-post
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                |My 
+                                                span.main-color Experience
+                                        ul.timeline
+                                            li
+                                                .timeline-content
+                                                    h4 CSS College Larkana
+                                                    em
+                                                        span Masters Degree
+                                                        span 2013-2016
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.
+                                            li
+                                                .timeline-content
+                                                    h4 CSS College Larkana
+                                                    em
+                                                        span Masters Degree
+                                                        span 2013-2016
+                                                    p
+                                                        | Lorem ipsum dolor sit amet, id electram reprimique his, dicta saepe oporteat eos an, esse erat doming at lam. Nec quodsi suscipiantur an, ad graece nemore ocurreret lam, agam ipsum meliore quo ut.
+                                            
+                                  
+                                  
+                                    //Work Experience End
+                            
+                                    //Testimonial Start
+                                    .col-md-12.blog-post
+                                        include ./includes/testimonials
+                                        
+                                        //Testimonial Ends
+                                    .col-md-12.text-center
+                                        a.load-more-button(href='../assets/data/swagata_cv.pdf', data-toggle='tooltip', data-placement='top', title='Download Resume' target='_blank') Resume
+                                include /includes/subscriber.pug
+
+                            include /includes/footer.pug
+
+                                a.scroll-to-top(href='#')
+                                    i.fa.fa-long-arrow-up

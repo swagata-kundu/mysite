@@ -1,39 +1,38 @@
-var express = require('express');
-var app = module.exports = express();
-var path = require('path');
+const Express = require('Express');
+const Path = require('path');
+const Config = require('config');
 
-app.set('view engine', 'pug');
-app.set('views', __dirname + '/views');
-app.locals.basedir = app.get('views');
 
-var static = require('./assets/data/static');
 
-app.use('/assets', express.static(path.join(__dirname, 'assets')));
+var App = Express();
 
-app.get('/', function(req, res) {
-    res.render('home', { data: static })
-});
-app.get('/work', function(req, res) {
-    res.render('work', { data: static })
-});
 
-app.get('/about', function(req, res) {
-    res.render('about', { data: static })
-});
+App.set('view engine', 'pug');
+App.set('views', __dirname + '/views');
+App.locals.basedir = App.get('views');
 
-app.get('/contact', function(req, res) {
-    res.render('contact', { data: static })
-});
 
-app.use(function(req, res, next) {
+App.use('/assets', Express.static(Path.join(__dirname, 'assets')));
+
+
+App.use(require('./routes'));
+
+App.use((req, res, next) => {
     res.render('404', { data: static });
 });
 
 
-app.use(require('connect-livereload')({
+App.use(require('connect-livereload')({
     port: 6300,
     ignore: ['.js']
 }));
 
 
-app.listen(5000);
+App.listen(Config.get('port'), () => {
+    App.emit('online');
+});
+
+// print when online
+App.on('online', () => {
+    console.info('Application is listening on port ', Config.get('port'));
+});

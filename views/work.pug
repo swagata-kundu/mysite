@@ -32,8 +32,9 @@ html(lang='en')
                                         // Portfolio Start
                                         div
                                             // Portfolio Detail Start
-                                            +works
-                                            +works
+                                            for project in work
+                                                +works(project)
+                                            //- +works
                                             // Portfolio Detail End
                                             // Portfolio Detail Start
                                             .row.portfolio

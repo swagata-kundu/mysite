@@ -1844,7 +1844,10 @@ blockquote {
 }
 
 .timeline>li>.timeline-content>p {
-    margin: 0;
-    line-height: 1.6em;
-    color: rgba(0, 0, 0, .4);
+    font-size: 16px;
+    line-height: 30px;
+    color: #696868;
+    font-weight: 300;
+    letter-spacing: 0.8px;
+    font-family: "Poppins", sans-serif;
 }

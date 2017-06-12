@@ -36,54 +36,10 @@ html(lang='en')
                                                 +works(project)
                                             //- +works
                                             // Portfolio Detail End
-                                            // Portfolio Detail Start
-                                            .row.portfolio
-                                                .col-sm-6.custom-pad-1
-                                                    .image-carousel
-                                                        img.img-responsive(src='assets/images/portfolio/2.jpg', alt='')
-                                                        |                                                     
-                                                        img.img-responsive(src='assets/images/portfolio/3.jpg', alt='')
-                                                |                                             
-                                                .col-sm-6.custom-pad-2
-                                                    .table-responsive
-                                                        table.table.table-bordered
-                                                            tbody
-                                                                tr
-                                                                    td
-                                                                        b Skills
-                                                                    |                                                                 
-                                                                    td HTML5 / CSS3 / JAVASCRIPT
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Duration
-                                                                    |                                                                 
-                                                                    td 20 Days
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Cost
-                                                                    |                                                                 
-                                                                    td $5000
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b Url
-                                                                    |                                                                 
-                                                                    td
-                                                                        a(href='http://www.uipasta.com', title='uipasta') Rolling
-                                                                |                                                             
-                                                                tr
-                                                                    td
-                                                                        b About Project
-                                                                    |                                                                 
-                                                                    td
-                                                                        | Lorem ipsum dolor sit amet consectetur adipiscing elit Vivamus feugiat facilisis dignissim Etiam scelerisque ultricies euismod.
-                                            // Portfolio Detail End
-
-                                            
-                                    |                                 
+                                    
+                                                                        
                                     .col-md-12.text-center
+                                        unless work.length>=3
                                         a#load-more-portfolio.load-more-button(href='javascript:void(0)') Load
                                         |                                     
                                         #portfolio-end-message

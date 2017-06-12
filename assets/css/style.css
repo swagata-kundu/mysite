@@ -1851,3 +1851,29 @@ blockquote {
     letter-spacing: 0.8px;
     font-family: "Poppins", sans-serif;
 }
+
+.div-table {
+    display: table;
+    width: 100%;
+}
+
+div-table-body {
+    display: table-row-group;
+}
+
+.div-table-row {
+    display: table-row;
+}
+
+.div-table-cell {
+    display: table-cell;
+    padding: 15px;
+    line-height: 25px;
+    letter-spacing: 0.6px;
+    border: 1px solid #e4e4e4;
+}
+
+.blog-post .padding-top-10>p {
+    line-height: 25px;
+    font-size: 14px
+}

@@ -1,45 +1,43 @@
 mixin works(project)
     .row.portfolio
-        .col-sm-6.custom-pad-1.no-float
-            img.img-responsive(src='assets/images/portfolio/1.jpg', alt='')
+        .col-sm-5.custom-pad-1.no-float
+            if project.images && project.images.length==1
+                img.img-responsive(src=project.images[0], alt='')
+            else
+                .image-carousel
+                    for image in project.images
+                        img.img-responsive(src=image, alt='')
+
         |                                             
-        .col-sm-6.custom-pad-2.no-float
-            .table-responsive
-                table.table.table-bordered
-                    tbody
-                        tr
-                            td
-                                b Name
-                            |                                                                 
-                            td #{project.name}
-                        |
-                        tr
-                            td
-                                b Technologies
-                            |                                                                 
-                            td #{project.tech}
-                        |                                                             
-                        tr
-                            td
-                                b Duration
-                            |                                                                 
-                            td #{project.duration}
-                        |                                                                                                                          
-                        tr
-                            td
-                                b Url
-                            |                                                                 
-                            td
-                                a(href='http://www.uipasta.com', title='uipasta') Rolling
-                        |                                                             
-                        tr
-                            td
-                                b Role
-                            |                                                                 
-                            td
-                                |#{project.role}
-                        tr
-                            td
-                                b Description
-                                |                                                                 
-                            td #{project.desc}
+        .col-sm-7.custom-pad-2.no-float
+            .div-table
+                .div-table-row
+                    .div-table-cell
+                        b Name
+                    .div-table-cell
+                        |#{project.name}
+
+                .div-table-row
+                    .div-table-cell
+                        b Technologies
+                    .div-table-cell
+                        |#{project.tech}
+                
+                .div-table-row
+                    .div-table-cell
+                        b Duration
+                    .div-table-cell
+                        |#{project.duration}
+                .div-table-row
+                    .div-table-cell
+                        b Url
+                    .div-table-cell
+                        a(href=project.url, title=project.name target="_blank") #{project.name}
+                .div-table-row
+                    .div-table-cell
+                        b Role
+                    .div-table-cell
+                        |#{project.role}
+                
+        .col-md-12.padding-top-10
+            p    #{project.desc}

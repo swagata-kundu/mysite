@@ -1,7 +1,7 @@
 const Express = require('express');
 const Path = require('path');
 const Config = require('config');
-
+const Compression = require('compression');
 
 
 var App = Express();
@@ -12,7 +12,8 @@ App.set('views', __dirname + '/views');
 App.locals.basedir = App.get('views');
 
 
-App.use('/assets', Express.static(Path.join(__dirname, 'assets')));
+App.use('/assets', Compression(),
+    Express.static(Path.join(__dirname, 'assets')));
 
 
 App.use(require('./routes'));

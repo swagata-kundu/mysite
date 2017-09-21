@@ -1,0 +1,21 @@
+{
+  "name": "jade",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "compression": "^1.6.2",
+    "config": "^1.26.1",
+    "express": "^4.15.3",
+    "pug": "^2.0.0-rc.2",
+    "sitemap": "^1.12.0"
+  },
+  "devDependencies": {
+    "connect-livereload": "^0.6.0"
+  }
+}

@@ -1,0 +1,9 @@
+{
+    "apps": [{
+        "name": "IamSwagata.com-WEB",
+        "script": "app.js",
+        "env": {
+            "NODE_ENV": "production"
+        }
+    }]
+}

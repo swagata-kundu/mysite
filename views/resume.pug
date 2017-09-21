@@ -1,0 +1,89 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+
+                    // About Me (Left Sidebar) End
+                    // About Me (Right Sidebar) Start
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 Resume
+                                    a(href='contact')
+                                        i.icon-envelope
+                                .col-md-12.content-page
+
+                                    //Educational Experience Start
+                                    .col-md-12.blog-post
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                |My
+                                                span.main-color  Education
+                                        ul.timeline
+                                            li
+                                                .timeline-content
+                                                    h4 Banaras Hindu University
+                                                    em
+                                                        span M.Sc (CS)
+                                                        span 2013-2015
+                                                    p
+                                                        | The MCS program provides a conceptual and practical education in computer science by combining a broad core curriculum with user-selected areas of study. MCS coursework can include CS Professional courses. I have specialization in Data Analytics, Database Systems, Parallel Computing, Information Security and Assurance, Networking and Communications and Software Engineering
+                                            li
+                                                .timeline-content
+                                                    h4 West Bengal State University
+                                                    em
+                                                        span B.Sc (CS)
+                                                        span 2010-2013
+                                                    p
+                                                        | I have completed Bachelor of Science in Computer Science from Derozio Memorial College under West Bengal State University with first division marks.
+
+
+                                            //Educational Experience end
+
+
+                                    //Work Experience Start
+                                    .col-md-12.blog-post
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                |My 
+                                                span.main-color Experience
+                                        ul.timeline
+                                            li
+                                                .timeline-content
+                                                    h4 Daffodil Software Ltd
+                                                    em
+                                                        span Associate IT
+                                                        span 2015 June - Prasent
+                                                    p
+                                                        | 2 years of experience as a software developer with responsibility of understanding clients requirement and changes. Worked on both frontend and backend technologies. Having efficiency in SQL and NOSQL database operations.
+                                                        | Experience in TDD approach in software development.
+                                                        | I am also familiar in Agile process.
+                                                        | I have prior experience in realtime operations and cross platform notification technologies.  
+                                            
+
+                                    //Work Experience End
+
+                                    //Testimonial Start
+                                    .col-md-12.blog-post
+                                        include ./includes/testimonials
+
+                                        //Testimonial Ends
+                                    .col-md-12.text-center
+                                        a.load-more-button(href='../assets/data/swagata_cv.pdf', data-toggle='tooltip', data-placement='top', title='Download Resume' target='_blank') Resume
+
+                            include /includes/subscriber.pug
+
+                        include /includes/footer.pug
+
+                                a.scroll-to-top(href='#')
+                                    i.fa.fa-long-arrow-up

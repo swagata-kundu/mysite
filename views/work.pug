@@ -1,0 +1,57 @@
+doctype html
+html(lang='en')
+    include includes/head.pug
+    include includes/workMixin.pug
+    body
+        // Preloader Start
+        .preloader
+            .rounder
+        // Preloader End
+        #main
+            .container
+                .row
+                    // About Me (Left Sidebar) Start
+                    include /includes/about.pug
+                    .col-md-9
+                        .col-md-12.page-body
+                            .row
+                                .sub-title
+                                    h2 My Portfolio
+                                    |                                 
+                                    a(href='contact')
+                                        i.icon-envelope
+                                |                             
+                                .col-md-12.content-page
+                                    .col-md-12.blog-post
+                                        // Intro Start
+                                        .post-title.margin-bottom-30
+                                            h1
+                                                | Let&apos;s take a look on 
+                                                span.main-color My Work
+                                        // Intro End
+                                        // Portfolio Start
+                                        div
+                                            // Portfolio Detail Start
+                                            for project in work
+                                                +works(project)
+                                            //- +works
+                                            // Portfolio Detail End
+                                    
+                                                                        
+                                    .col-md-12.text-center
+                                        unless work.length>=3
+                                        a#load-more-portfolio.load-more-button(href='javascript:void(0)') Load
+                                        |                                     
+                                        #portfolio-end-message
+                                include /includes/subscriber.pug
+
+                            // Footer Start
+                        include /includes/footer.pug
+
+                            // Footer End
+                            // Portfolio (Right Sidebar) End
+
+                            // Back to Top Start
+                            a.scroll-to-top(href='#')
+                                i.fa.fa-long-arrow-up
+                            // Back to Top End
